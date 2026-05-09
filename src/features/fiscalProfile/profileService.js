@@ -6,10 +6,10 @@ export const RESICO_ANNUAL_LIMIT = 3500000
 export const RESICO_WARNING_THRESHOLD = 0.9
 
 export const getFiscalProfile = async () =>
-  (await getSetting(PROFILE_KEY, {
+  getSetting(PROFILE_KEY, {
     salaried: { active: false, monthlyIncome: 0 },
     resico: { active: false, monthlyIncome: 0 },
-  }))
+  })
 
 export const saveFiscalProfile = async (profile) => {
   await setSetting(PROFILE_KEY, profile)

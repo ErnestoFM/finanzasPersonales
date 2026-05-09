@@ -13,7 +13,7 @@ export const Plan = {
 }
 
 export const getCurrentPlan = async () => {
-  return (await getSetting('subscriptionPlan', Plan.Free))
+  return getSetting('subscriptionPlan', Plan.Free)
 }
 
 export const isFeatureAvailable = async (feature) => {

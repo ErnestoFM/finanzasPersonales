@@ -1,8 +1,13 @@
 [
-  {
-    "lower": 0,
-    "upper": 0,
-    "fixedFee": 0,
-    "rate": 0
-  }
+  { "lower": 0.01, "upper": 746.04, "fixedFee": 0.00, "rate": 0.0192 },
+  { "lower": 746.05, "upper": 6332.05, "fixedFee": 14.32, "rate": 0.0640 },
+  { "lower": 6332.06, "upper": 11128.01, "fixedFee": 371.83, "rate": 0.1088 },
+  { "lower": 11128.02, "upper": 12935.82, "fixedFee": 893.63, "rate": 0.1600 },
+  { "lower": 12935.83, "upper": 15487.71, "fixedFee": 1182.88, "rate": 0.1792 },
+  { "lower": 15487.72, "upper": 31236.49, "fixedFee": 1640.18, "rate": 0.2136 },
+  { "lower": 31236.50, "upper": 49233.00, "fixedFee": 5004.12, "rate": 0.2352 },
+  { "lower": 49233.01, "upper": 93993.90, "fixedFee": 9236.89, "rate": 0.3000 },
+  { "lower": 93993.91, "upper": 125325.20, "fixedFee": 22665.17, "rate": 0.3200 },
+  { "lower": 125325.21, "upper": 375975.61, "fixedFee": 32691.18, "rate": 0.3400 },
+  { "lower": 375975.62, "upper": 999999999, "fixedFee": 117912.32, "rate": 0.3500 }
 ]

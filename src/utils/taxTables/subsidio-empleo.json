@@ -1,0 +1,14 @@
+[
+  { "lower": 0.01, "upper": 1768.96, "subsidio": 407.02 },
+  { "lower": 1768.97, "upper": 1978.70, "subsidio": 406.83 },
+  { "lower": 1978.71, "upper": 2653.38, "subsidio": 406.62 },
+  { "lower": 2653.39, "upper": 3472.84, "subsidio": 392.77 },
+  { "lower": 3472.85, "upper": 3537.87, "subsidio": 382.46 },
+  { "lower": 3537.88, "upper": 4446.15, "subsidio": 354.23 },
+  { "lower": 4446.16, "upper": 4717.18, "subsidio": 324.87 },
+  { "lower": 4717.19, "upper": 5335.42, "subsidio": 294.63 },
+  { "lower": 5335.43, "upper": 6224.67, "subsidio": 253.54 },
+  { "lower": 6224.68, "upper": 7113.90, "subsidio": 217.61 },
+  { "lower": 7113.91, "upper": 7382.33, "subsidio": 0.00 },
+  { "lower": 7382.34, "upper": 999999999, "subsidio": 0.00 }
+]

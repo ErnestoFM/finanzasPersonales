@@ -1,11 +1,25 @@
+const toLocalRepresentation = (date) => {
+  if (
+    date.getUTCHours() === 0 &&
+    date.getUTCMinutes() === 0 &&
+    date.getUTCSeconds() === 0 &&
+    date.getUTCMilliseconds() === 0
+  ) {
+    return new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate())
+  }
+  return date
+}
+
 const startOfMonth = (date) => new Date(date.getFullYear(), date.getMonth(), 1)
 const endOfMonth = (date) => new Date(date.getFullYear(), date.getMonth() + 1, 0, 23, 59, 59, 999)
 
 export const filterByMonth = (items, referenceDate = new Date()) => {
-  const start = startOfMonth(referenceDate)
-  const end = endOfMonth(referenceDate)
+  const localRef = toLocalRepresentation(referenceDate)
+  const start = startOfMonth(localRef)
+  const end = endOfMonth(localRef)
   return items.filter((item) => {
-    const itemDate = new Date(item.date)
+    const [y, m, d] = item.date.split('-').map(Number)
+    const itemDate = new Date(y, m - 1, d)
     return itemDate >= start && itemDate <= end
   })
 }
@@ -49,9 +63,10 @@ export const getExpenseBreakdownChart = (expenses, categories) =>
   Array.from(getExpenseBreakdown(expenses, categories).values())
 
 export const getMonthlyComparison = (incomes, expenses, months = 6, referenceDate = new Date()) => {
+  const localRef = toLocalRepresentation(referenceDate)
   const results = []
   for (let offset = months - 1; offset >= 0; offset -= 1) {
-    const date = new Date(referenceDate.getFullYear(), referenceDate.getMonth() - offset, 1)
+    const date = new Date(localRef.getFullYear(), localRef.getMonth() - offset, 1)
     const totals = getMonthlyTotals(incomes, expenses, date)
     results.push({
       label: date.toLocaleDateString('es-MX', { month: 'short' }),

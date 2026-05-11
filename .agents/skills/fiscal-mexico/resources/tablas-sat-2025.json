@@ -1,0 +1,241 @@
+{
+    "version": "2025",
+    "fuente": "SAT México — Resolución Miscelánea Fiscal 2025 y LISR",
+    "actualizadoEl": "2025-01-01",
+    "isrMensualAsalariado": {
+        "referencia": "Art. 96 LISR — Tabla mensual para retención de ISR",
+        "tabla": [
+            {
+                "limiteInferior": 0.01,
+                "limiteSuperior": 746.04,
+                "cuotaFija": 0.00,
+                "tasaExcedente": 0.0192
+            },
+            {
+                "limiteInferior": 746.05,
+                "limiteSuperior": 6332.05,
+                "cuotaFija": 14.32,
+                "tasaExcedente": 0.0640
+            },
+            {
+                "limiteInferior": 6332.06,
+                "limiteSuperior": 11128.01,
+                "cuotaFija": 371.83,
+                "tasaExcedente": 0.1088
+            },
+            {
+                "limiteInferior": 11128.02,
+                "limiteSuperior": 12935.82,
+                "cuotaFija": 893.63,
+                "tasaExcedente": 0.1600
+            },
+            {
+                "limiteInferior": 12935.83,
+                "limiteSuperior": 15487.71,
+                "cuotaFija": 1182.88,
+                "tasaExcedente": 0.1792
+            },
+            {
+                "limiteInferior": 15487.72,
+                "limiteSuperior": 31236.49,
+                "cuotaFija": 1640.18,
+                "tasaExcedente": 0.2136
+            },
+            {
+                "limiteInferior": 31236.50,
+                "limiteSuperior": 49233.00,
+                "cuotaFija": 5004.12,
+                "tasaExcedente": 0.2352
+            },
+            {
+                "limiteInferior": 49233.01,
+                "limiteSuperior": 93993.90,
+                "cuotaFija": 9236.89,
+                "tasaExcedente": 0.3000
+            },
+            {
+                "limiteInferior": 93993.91,
+                "limiteSuperior": 125325.20,
+                "cuotaFija": 22665.17,
+                "tasaExcedente": 0.3200
+            },
+            {
+                "limiteInferior": 125325.21,
+                "limiteSuperior": 375975.61,
+                "cuotaFija": 32691.18,
+                "tasaExcedente": 0.3400
+            },
+            {
+                "limiteInferior": 375975.62,
+                "limiteSuperior": 999999999,
+                "cuotaFija": 117912.32,
+                "tasaExcedente": 0.3500
+            }
+        ]
+    },
+    "subsidioAlEmpleo": {
+        "referencia": "Anexo 8 RMF 2025 — Tabla de subsidio al empleo mensual",
+        "nota": "El subsidio se resta al ISR causado. Si el subsidio es mayor al ISR, la diferencia se entrega al trabajador.",
+        "tabla": [
+            {
+                "limiteInferior": 0.01,
+                "limiteSuperior": 1768.96,
+                "subsidio": 407.02
+            },
+            {
+                "limiteInferior": 1768.97,
+                "limiteSuperior": 1978.70,
+                "subsidio": 406.83
+            },
+            {
+                "limiteInferior": 1978.71,
+                "limiteSuperior": 2653.38,
+                "subsidio": 406.62
+            },
+            {
+                "limiteInferior": 2653.39,
+                "limiteSuperior": 3472.84,
+                "subsidio": 392.77
+            },
+            {
+                "limiteInferior": 3472.85,
+                "limiteSuperior": 3537.87,
+                "subsidio": 382.46
+            },
+            {
+                "limiteInferior": 3537.88,
+                "limiteSuperior": 4446.15,
+                "subsidio": 354.23
+            },
+            {
+                "limiteInferior": 4446.16,
+                "limiteSuperior": 4717.18,
+                "subsidio": 324.87
+            },
+            {
+                "limiteInferior": 4717.19,
+                "limiteSuperior": 5335.42,
+                "subsidio": 294.63
+            },
+            {
+                "limiteInferior": 5335.43,
+                "limiteSuperior": 6224.67,
+                "subsidio": 253.54
+            },
+            {
+                "limiteInferior": 6224.68,
+                "limiteSuperior": 7113.90,
+                "subsidio": 217.61
+            },
+            {
+                "limiteInferior": 7113.91,
+                "limiteSuperior": 7382.33,
+                "subsidio": 0.00
+            },
+            {
+                "limiteInferior": 7382.34,
+                "limiteSuperior": 999999999,
+                "subsidio": 0.00
+            }
+        ]
+    },
+    "resico": {
+        "referencia": "Art. 113-E LISR — Régimen Simplificado de Confianza, personas físicas",
+        "limiteAnual": 3500000,
+        "pagoDia": 17,
+        "pagoDefinitivo": true,
+        "nota": "El pago mensual es definitivo. No se presenta declaración anual por ingresos RESICO.",
+        "tabla": [
+            {
+                "limiteInferior": 0.01,
+                "limiteSuperior": 25000.00,
+                "tasa": 0.0100
+            },
+            {
+                "limiteInferior": 25000.01,
+                "limiteSuperior": 50000.00,
+                "tasa": 0.0110
+            },
+            {
+                "limiteInferior": 50000.01,
+                "limiteSuperior": 83333.33,
+                "tasa": 0.0150
+            },
+            {
+                "limiteInferior": 83333.34,
+                "limiteSuperior": 208333.33,
+                "tasa": 0.0200
+            },
+            {
+                "limiteInferior": 208333.34,
+                "limiteSuperior": 291666.67,
+                "tasa": 0.0250
+            },
+            {
+                "limiteInferior": 291666.68,
+                "limiteSuperior": 3500000,
+                "tasa": 0.0300
+            }
+        ]
+    },
+    "deduccionesPersonales": {
+        "referencia": "Art. 151 LISR — Deducciones personales para declaración anual",
+        "aplicaA": [
+            "Asalariado"
+        ],
+        "items": [
+            {
+                "concepto": "Honorarios médicos, dentales y hospitalarios",
+                "limite": "Sin límite en monto, pero sujeto al límite global",
+                "requiereFactura": true
+            },
+            {
+                "concepto": "Colegiaturas",
+                "limitesPorNivel": {
+                    "preescolar": 14200,
+                    "primaria": 12900,
+                    "secundaria": 19900,
+                    "profesionalTecnico": 17100,
+                    "bachillerato": 24500
+                },
+                "requiereFactura": true
+            },
+            {
+                "concepto": "Intereses reales de créditos hipotecarios",
+                "limite": "750,000 UDIS del saldo del crédito",
+                "requiereConstancia": true
+            },
+            {
+                "concepto": "Donativos a instituciones autorizadas",
+                "limite": "7% del ingreso acumulable del ejercicio anterior",
+                "requiereFactura": true
+            },
+            {
+                "concepto": "Primas de seguros de gastos médicos",
+                "limite": "Sin límite individual, sujeto al límite global",
+                "requiereFactura": true
+            },
+            {
+                "concepto": "Aportaciones voluntarias al AFORE",
+                "limite": "10% del ingreso acumulable, máximo 5 SMGA",
+                "requiereFactura": false
+            }
+        ],
+        "limiteGlobal": {
+            "descripcion": "El total de deducciones personales no puede exceder el menor entre:",
+            "opciones": [
+                "15% del ingreso total anual del contribuyente",
+                "5 veces el valor anual de la UMA ($189,862.20 para 2025)"
+            ]
+        }
+    },
+    "uma2025": {
+        "valorDiario": 108.57,
+        "valorMensual": 3299.08,
+        "valorAnual": 39588.96
+    },
+    "smg2025": {
+        "zonaGeneral": 278.80,
+        "zonaFronteraNorte": 419.88
+    }
+}

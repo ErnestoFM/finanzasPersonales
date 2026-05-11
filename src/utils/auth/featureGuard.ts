@@ -4,6 +4,7 @@ export const Feature = {
   ExportReports: 'export_reports',
   Projections: 'projections',
   CloudSync: 'cloud_sync',
+  TaxEngine: 'tax_engine',
 }
 
 export const Plan = {

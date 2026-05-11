@@ -1,4 +1,4 @@
-name: Main Deploy
+name: Main — Test & Deploy
 
 on:
   push:
@@ -8,19 +8,48 @@ permissions:
   contents: read
 
 jobs:
-  build-and-deploy:
+  # ── 1. Tests ──────────────────────────────────────────────────────────────
+  test:
+    name: Unit tests & coverage
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
-      - run: npm ci
-      - run: npm run test:coverage
-      - run: npm run build
-      - name: Deploy to Vercel
-        if: ${{ secrets.VERCEL_TOKEN && secrets.VERCEL_ORG_ID && secrets.VERCEL_PROJECT_ID }}
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Tests con cobertura (mínimo 80%)
+        run: npm run test:coverage
+
+  # ── 2. Build & Deploy a Vercel (solo si tests pasan) ──────────────────────
+  deploy:
+    name: Build & Deploy a Vercel
+    needs: test          # 🔒 solo corre si el job "test" fue exitoso
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Build de producción
+        run: npm run build
+
+      - name: Deploy a Vercel (producción)
         uses: amondnet/vercel-action@v25
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}

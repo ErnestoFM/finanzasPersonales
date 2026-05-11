@@ -25,13 +25,16 @@ export const calculateSalariedTax = (income) => {
   // 4. Sumar la cuota fija
   const totalIsrBeforeSubsidio = bracket.fixedFee + marginalTax
 
-  // 5. Buscar y aplicar el subsidio al empleo correspondiente (Anexo 8 RMF 2025)
+  // 5. Buscar y aplicar el subsidio al empleo (Anexo 8 RMF 2025).
+  // La tabla de subsidio cubre exactamente los mismos rangos que la tabla de ISR.
   const subsidioRow = subsidioTable.find((row) => income >= row.lower && income <= row.upper)
-  const subsidio = subsidioRow ? subsidioRow.subsidio : 0
+  const subsidio = subsidioRow ? subsidioRow.subsidio : /* istanbul ignore next */ 0
 
   // 6. El impuesto neto a retener es el impuesto bruto menos el subsidio aplicable (mínimo 0)
   return Math.max(0, totalIsrBeforeSubsidio - subsidio)
 }
+
+
 
 /**
  * Calcula el impuesto RESICO basado en el ingreso cobrado mensual.

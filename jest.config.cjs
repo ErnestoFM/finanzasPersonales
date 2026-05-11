@@ -9,7 +9,7 @@ module.exports = {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
     '\\.(png|jpg|jpeg|svg)$': '<rootDir>/__tests__/__mocks__/fileMock.js',
   },
-  testMatch: ['**/__tests__/**/*.(test|spec).(js|jsx)'],
+  testMatch: ['**/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)'],
   coverageThreshold: {
     global: {
       branches: 80,

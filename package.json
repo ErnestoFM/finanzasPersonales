@@ -13,6 +13,7 @@
     "test:utils": "jest __tests__/unit/utils"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.105.4",
     "dexie": "^4.4.2",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
@@ -23,10 +24,12 @@
   "devDependencies": {
     "@babel/preset-env": "^7.29.5",
     "@babel/preset-react": "^7.28.5",
+    "@babel/preset-typescript": "^7.28.5",
     "@eslint/js": "^10.0.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
+    "@types/jest": "^30.0.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",

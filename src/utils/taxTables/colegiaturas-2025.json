@@ -1,0 +1,10 @@
+{
+  "referencia": "Decreto DOF — Estímulo fiscal por pago de colegiaturas",
+  "limitesPorNivel": {
+    "preescolar": 14200,
+    "primaria": 12900,
+    "secundaria": 19900,
+    "profesionalTecnico": 17100,
+    "bachillerato": 24500
+  }
+}

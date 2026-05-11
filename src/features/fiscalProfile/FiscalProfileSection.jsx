@@ -9,7 +9,7 @@ import {
 } from './profileService.js'
 import { Feature, Plan, isFeatureAvailable } from '../../utils/auth/featureGuard.ts'
 import { calculateMixedTax } from '../../utils/fiscal/taxCalculator.js'
-import { getSetting, setSetting } from '../../db/settings.js'
+import { setSetting } from '../../db/settings.js'
 
 const formatCurrency = (value) =>
   value.toLocaleString('es-MX', { style: 'currency', currency: 'MXN' })

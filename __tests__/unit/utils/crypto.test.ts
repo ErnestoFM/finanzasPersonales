@@ -114,13 +114,17 @@ test('decrypt: texto corrupto lanza error (integridad AES-GCM)', async () => {
   await expect(decrypt('datos-corruptos-no-validos', key)).rejects.toThrow()
 })
 
-test('decrypt: IV manipulado lanza error', async () => {
+test('decrypt: ciphertext manipulado lanza error (integridad AEAD de AES-GCM)', async () => {
   const salt = generateSalt()
   const key = await deriveKeyFromPin('1234', salt)
   const ciphertext = await encrypt('secreto', key)
 
-  // Modificamos el primer carácter del base64 para corromper el IV
-  const corrupted = 'X' + ciphertext.slice(1)
+  // Corrompemos la parte del ciphertext (después del ".")
+  // AES-GCM verifica un tag de autenticación; bytes alterados causan fallo garantizado
+  const [iv, ct] = ciphertext.split('.')
+  const ctBytes = Buffer.from(ct, 'base64')
+  ctBytes[0] ^= 0xff // flip all bits del primer byte
+  const corrupted = `${iv}.${ctBytes.toString('base64')}`
   await expect(decrypt(corrupted, key)).rejects.toThrow()
 })
 

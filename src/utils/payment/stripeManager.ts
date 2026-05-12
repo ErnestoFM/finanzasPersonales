@@ -116,3 +116,11 @@ export const createCheckoutSessionUrl = (email: string): string => {
   // Generamos una URL realista para redirigir al Stripe Checkout Hosted seguro
   return `https://checkout.stripe.com/pay/cs_test_caudal_subscription?prefilled_email=${encodedEmail}&price=${STRIPE_PRICE_ID}&pub_key=${pk}&success_url=https://caudal.mx/app?session_id={CHECKOUT_SESSION_ID}`
 }
+
+/**
+ * Redirige al usuario de forma asíncrona y segura a la sesión de Stripe Checkout.
+ */
+export const redirectToCheckout = (email: string): void => {
+  window.location.href = createCheckoutSessionUrl(email)
+}
+

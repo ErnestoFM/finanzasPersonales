@@ -16,8 +16,11 @@ import {
   getOnboardingCompleted,
   setOnboardingCompleted,
 } from './features/onboarding/onboardingService.js'
+import ExportReportsSection from './features/subscription/ExportReportsSection.jsx'
+import PricingPage from './features/subscription/PricingPage.jsx'
 
 export default function App() {
+
   const incomesState = useAsyncList(listIncomes)
   const expensesState = useAsyncList(listExpenses)
   const categoriesState = useAsyncList(listCategories)
@@ -105,6 +108,14 @@ export default function App() {
       <CategoriesSection categories={categoriesState.data} onReload={categoriesState.reload} />
 
       <FiscalProfileSection />
+
+      <ExportReportsSection
+        incomes={incomesState.data}
+        expenses={expensesState.data}
+        categories={categoriesState.data}
+      />
+
+      <PricingPage />
 
       <PinSection />
     </div>

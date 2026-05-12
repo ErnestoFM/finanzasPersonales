@@ -200,7 +200,7 @@ describe('Búsqueda combinada (searchMovements)', () => {
 describe('Vista de calendario (groupByDate)', () => {
   test('agrupa movimientos por fecha', () => {
     const grouped = groupByDate(movements)
-    expect(Object.keys(grouped)).toHaveLength(6) // 6 fechas distintas
+    expect(Object.keys(grouped)).toHaveLength(7) // 7 fechas distintas
   })
 
   test('fecha con múltiples movimientos los agrupa correctamente', () => {
